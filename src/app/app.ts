@@ -42,7 +42,7 @@ export class AppComponent implements OnInit, OnDestroy {
     },
     {
       foto: 'assets/messifoto5.png',
-      dialogo: 'Pero también te acordás lo que pasó después, ¿verdad? Llegó 2022 y salimos campeones del mundo. ¿Qué quiero decir con esto? Que siempre hay luz al final del túnel. Habrá tiempos mejores. Creeme.'
+      dialogo: 'Pero también te acordás lo que pasó después, ¿verdad? Llegó 2022 y salimos campeones del mundo. ¿Qué quiero decir con esto? Que siempre hay luz al final del túnel. Vendran tiempos mejores. Creeme.'
     },
     {
       foto: 'assets/messifoto6.png',
