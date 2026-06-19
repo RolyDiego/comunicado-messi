@@ -24,7 +24,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private typeTimerId: ReturnType<typeof setTimeout> | null = null;
 
   slides: Slide[] = [
-    {
+     {
       foto: 'assets/messifoto1.png',
       dialogo: 'Alo Ana, ¡qué tal! Acá te saluda Leo Messi.'
     },
@@ -49,12 +49,12 @@ export class AppComponent implements OnInit, OnDestroy {
       dialogo: 'Escuchame una cosa: tu tesis, tus años en la U, tu ser, todo lo que aprendiste... eso está dentro de vos. En tu cabeza. Y eso nadie te lo puede quitar.'
     },
     {
-      foto: 'assets/messifoto7.png',
-      dialogo: 'Y encima los hdp se llevaron el maquillaje... eso sí que no tiene perdón. Aunque che, igual te ves linda.'
+      foto: 'assets/messifoto8.png',
+      dialogo: 'Arriba, campeona. Este partido recién empieza'
     },
     {
-      foto: 'assets/messifoto8.png',
-      dialogo: 'Arriba, campeona. Este partido recién empieza.'
+      foto: 'assets/messifoto7.png',
+      dialogo: 'Y bueno, ese es el fin de mi comunicado, en estos momentos tengo que regresar a entrenar con los muchachos para el siguiente partido contra Austria, cuidate mucho, chau chau' 
     }
   ];
 

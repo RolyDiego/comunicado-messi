@@ -19,28 +19,28 @@
   <span class="progress-label">{{ progress }}</span>
 
   <!-- FOTO DE MESSI -->
-  <div class="messi-wrap" (click)="next()">
+  <div class="messi-wrap">
     <img [src]="currentSlide.foto" alt="Messi" class="messi-img" />
     <div class="messi-name">🇦🇷 Leo Messi</div>
   </div>
 
   <!-- GLOBO DE DIÁLOGO -->
-  <div class="bubble-wrap" (click)="next()">
+  <div class="bubble-wrap">
     <div class="bubble">
       <p class="bubble__text">{{ typedText }}<span class="cursor" *ngIf="isTyping">|</span></p>
     </div>
-    <div class="bubble__hint" *ngIf="!isTyping">
-      <span *ngIf="!isLastSlide">Click para continuar →</span>
-      <span *ngIf="isLastSlide">Click para ver el mensaje final</span>
-    </div>
     <div class="bubble__hint typing-hint" *ngIf="isTyping">
-      Click para saltar...
+      Click en Siguiente para saltar...
     </div>
   </div>
 
   <!-- NAVEGACIÓN -->
   <div class="nav-btns">
     <button class="nav-btn nav-btn--prev" (click)="prev()">← Anterior</button>
+    <button class="nav-btn nav-btn--next" (click)="next()">
+      <span *ngIf="!isLastSlide">Siguiente →</span>
+      <span *ngIf="isLastSlide">Ver mensaje final →</span>
+    </button>
   </div>
 
 </div>
