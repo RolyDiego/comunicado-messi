@@ -46,7 +46,7 @@ export class AppComponent implements OnInit, OnDestroy {
     },
     {
       foto: 'assets/messifoto6.png',
-      dialogo: 'Escuchame una cosa: tu tesis, tus años en la U, tu ser, todo lo que aprendiste... eso está dentro de vos. En tu cabeza. Y eso nadie te lo puede quitar.'
+      dialogo: 'Escuchame una cosa: Tus experiencias, tus años en la U, tu ser, todo lo que aprendiste... eso está dentro de vos. En tu cabeza. Y eso nadie te lo puede quitar.'
     },
     {
       foto: 'assets/messifoto8.png',
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit, OnDestroy {
     },
     {
       foto: 'assets/messifoto7.png',
-      dialogo: 'Y bueno, ese es el fin de mi comunicado, en estos momentos tengo que regresar a entrenar con los muchachos para el siguiente partido contra Austria, cuidate mucho, chau chau' 
+      dialogo: 'Y bueno, ese es el fin de mi comunicado, en estos momentos tengo que regresar a entrenar con los muchachos para el siguiente partido contra Austria, cuidate mucho y suerte en tu tesis, chau chau' 
     }
   ];
 
