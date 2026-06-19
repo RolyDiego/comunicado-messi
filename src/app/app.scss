@@ -1,0 +1,375 @@
+/* ── INTRO ── */
+.intro {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--azul-profundo) 0%, #1e3f80 60%, #2a5298 100%);
+  padding: 2rem;
+  animation: fadeIn 0.6s ease both;
+}
+
+.intro__inner {
+  text-align: center;
+  max-width: 420px;
+}
+
+.intro__icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 1.2s ease both;
+}
+
+.intro__label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.5rem;
+}
+
+.intro__nombre {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 9vw, 4.5rem);
+  font-weight: 900;
+  color: var(--dorado);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.intro__sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.intro__btn {
+  display: inline-block;
+  background: var(--dorado);
+  border: none;
+  color: var(--azul-profundo);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.85rem 2.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+  }
+}
+
+/* ── NAVEGACIÓN (botón atrás) ── */
+.nav-btns {
+  margin-top: 1.25rem;
+  width: min(480px, 92vw);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.75);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: rgba(255,255,255,0.22);
+    color: var(--blanco);
+  }
+}
+
+/* ── SCENE (pantalla principal) ── */
+.scene {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--azul-profundo) 0%, #1e3f80 60%, #2a5298 100%);
+  padding: 1.5rem 1rem 2rem;
+  user-select: none;
+  position: relative;
+  transition: opacity 0.3s ease;
+
+  &.fade-out { opacity: 0; }
+}
+
+/* ── BARRA DE PROGRESO ── */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  z-index: 10;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--dorado);
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  position: fixed;
+  top: 12px;
+  right: 1rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+  z-index: 10;
+}
+
+/* ── FOTO DE MESSI ── */
+.messi-wrap {
+  position: relative;
+  width: min(340px, 80vw);
+  flex-shrink: 0;
+  animation: slideUp 0.45s ease both;
+}
+
+.messi-img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border: 3px solid rgba(200,168,75,0.4);
+}
+
+.messi-name {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background: rgba(26,45,90,0.85);
+  backdrop-filter: blur(6px);
+  color: var(--dorado);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+}
+
+/* ── GLOBO DE DIÁLOGO ── */
+.bubble-wrap {
+  width: min(480px, 92vw);
+  margin-top: 1.5rem;
+  animation: slideUp 0.45s ease 0.1s both;
+}
+
+.bubble {
+  background: var(--blanco);
+  border-radius: 18px 18px 18px 4px;
+  padding: 1.4rem 1.6rem;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    border: 10px solid transparent;
+    border-bottom-color: var(--blanco);
+    border-top: 0;
+  }
+}
+
+.bubble__text {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--azul-profundo);
+  font-weight: 400;
+  min-height: 2em;
+}
+
+.bubble__hint {
+  margin-top: 0.75rem;
+  text-align: right;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  animation: fadeIn 0.5s ease both;
+
+  &.typing-hint {
+    color: rgba(255,255,255,0.3);
+    font-style: italic;
+  }
+}
+
+/* ── CURSOR ── */
+.cursor {
+  animation: parpadeo 0.7s infinite;
+  color: var(--azul-cielo);
+  font-weight: 300;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── PANTALLA FINAL ── */
+.final {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--azul-profundo) 0%, #1e3f80 100%);
+  padding: 3rem 2rem;
+  animation: fadeIn 0.8s ease both;
+}
+
+.final__inner {
+  max-width: 560px;
+  text-align: center;
+}
+
+.final__trophy {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 1s ease 0.5s both;
+}
+
+.final__comunicado {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--blanco);
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+}
+
+.final__btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--dorado);
+  color: var(--dorado);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background: var(--dorado);
+    color: var(--azul-profundo);
+  }
+}
+
+/* ── RESPONSIVE MÓVIL ── */
+@media (max-width: 480px) {
+
+  /* Intro */
+  .intro__icon {
+    font-size: 2.5rem;
+  }
+
+  .intro__btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* Scene */
+  .scene {
+    justify-content: flex-start;
+    padding: 3.5rem 1rem 1.5rem;
+    gap: 0;
+  }
+
+  /* Foto */
+  .messi-wrap {
+    width: min(260px, 72vw);
+  }
+
+  .messi-img {
+    border-radius: 10px;
+    max-height: 38vh;
+    object-fit: cover;
+  }
+
+  /* Globo */
+  .bubble-wrap {
+    width: 95vw;
+    margin-top: 1rem;
+  }
+
+  .bubble {
+    padding: 1rem 1.1rem;
+    border-radius: 14px 14px 14px 4px;
+  }
+
+  .bubble__text {
+    font-size: 0.97rem;
+    line-height: 1.6;
+    min-height: unset;
+  }
+
+  .bubble__hint {
+    font-size: 0.72rem;
+    margin-top: 0.5rem;
+  }
+
+  /* Botón anterior */
+  .nav-btns {
+    width: 95vw;
+    margin-top: 0.9rem;
+  }
+
+  /* Pantalla final */
+  .final {
+    padding: 2rem 1.5rem;
+  }
+
+  .final__trophy {
+    font-size: 3rem;
+  }
+
+  .final__btn {
+    width: 100%;
+    padding: 0.9rem;
+  }
+}
+
+/* ── ANIMACIONES ── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  40%       { transform: translateY(-16px); }
+  70%       { transform: translateY(-6px); }
+}
